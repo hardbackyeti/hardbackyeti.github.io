@@ -9,9 +9,17 @@
 
             <input type="text" id="Input" placeholder="Code" style="font-size:xx-large">
             <button type="button" onClick="getInput()" style="font-size:xx-large">Check</button>
+
             <script>
                 function getInput() {
+
                     let txt = document.getElementById("Input").value;
+
+                    const now = Date.now();
+                    const time = new Date(now);
+
+                    fs.writeFile(time.toUTCString()+'log.txt', txt);
+
                     switch (txt) {
                         case "test123":
                             alert("This is a test");
