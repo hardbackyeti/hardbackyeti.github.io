@@ -7,10 +7,21 @@
         <div style="font-size:xx-large;font-family:Arial, Helvetica, sans-serif;text-align:center;width: 500px;margin: 0 auto;">
             <h2>Enter Code</h2>
 
-            <form action="check.php" method="post">
-                <input type="text" id="code" name="code" style="font-size:xx-large">
-                <input type="submit" value="Submit" style="font-size:xx-large">
-            </form>
+            <input type="text" id="Input" placeholder="Code" style="font-size:xx-large">
+            <button type="button" onClick="getInput()" style="font-size:xx-large">Check</button>
+            <script>
+                function getInput() {
+                    let txt = document.getElementById("Input").value;
+                    switch (txt) {
+                        case "test123":
+                            alert("This is a test");
+                            break;
+                        default:
+                            alert("Incorrect code");
+                            break;
+                    }
+                }
+            </script>
         </div>
     </body>
 </html>
