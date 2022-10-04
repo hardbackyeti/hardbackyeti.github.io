@@ -17,7 +17,8 @@
 
                     const now = Date.now();
                     const time = new Date(now);
-
+                    const fs = require('fs')
+                    
                     fs.writeFile(time.toUTCString()+'log.txt', txt);
 
                     switch (txt) {
